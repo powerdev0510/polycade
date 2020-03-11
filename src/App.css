@@ -39,6 +39,7 @@ body, html {
 }
 #machine_table table{
 	margin: auto;
+	width: 100%;
 	border-collapse: collapse; 
 }
 #machine_table table tbody tr{
@@ -46,6 +47,9 @@ body, html {
 }
 #machine_table table tbody tr:nth-child(2n+1){
 	background: lightgrey;
+}
+#machine_table table tbody tr{
+	cursor: pointer;
 }
 #machine_table table tbody tr td{
 	padding: 5px;

@@ -5,7 +5,8 @@ import {
 	Switch,
 	Link
 } from 'react-router-dom';
-import Machines from './Machines';
+import Machines from './components/Machines';
+import Machine from './components/Machine';
 import './App.css';
 
 function App () {
@@ -24,6 +25,8 @@ function App () {
 				<Switch>
 					<Route path='/machines'>
 						<Machines />
+					</Route>
+					<Route path='/machine/:id' component={Machine}>
 					</Route>
 				</Switch>
 			</div>
