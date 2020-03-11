@@ -18,12 +18,12 @@ export default function Machines () {
 						<td>Progress Bar</td>
 					</tr>
 					<tr>
-						<td>Machine 1</td>
+						<td>Machine 2</td>
 						<td>192.98.11.10</td>
 						<td>Progress Bar</td>
 					</tr>
 					<tr>
-						<td>Machine 1</td>
+						<td>Machine 3</td>
 						<td>192.98.11.10</td>
 						<td>Progress Bar</td>
 					</tr>
