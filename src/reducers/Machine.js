@@ -14,7 +14,9 @@ export default function Machine (state = initialState, action) {
                 item: action.item
             };
         case types.GET_BY_ID:
+            console.log("qwerqwerwqe" + item)
             foundIndex = item.findIndex(x => x.id === action.id)
+            console.log("aasdfasdfasdf" + action.id + ":" + foundIndex)
             return{
                 ...state,
                 index: foundIndex

@@ -30,11 +30,8 @@ class Main extends Component {
 				</nav>
 
 				<Switch>
-					<Route path='/machines'>
-						<Machines />
-					</Route>
-					<Route path='/machine/:id' component={Machine}>
-					</Route>
+					<Route path='/machines' component={Machines} />
+					<Route path='/machine/:id' component={Machine} />
 				</Switch>
 			</Router>
 		);

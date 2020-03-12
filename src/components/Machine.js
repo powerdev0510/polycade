@@ -7,7 +7,7 @@ import { getById, updateMachine } from '../actions'
 class Machine extends Component {
     constructor (props) {
         super(props);
-        console.log(props.match.params.id);
+        // console.log(props.match.params.id);
         this.state = {
             id: props.match.params.id,
             new_name: '',

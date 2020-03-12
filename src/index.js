@@ -7,7 +7,7 @@ import reducers from './reducers';
 import { Provider } from 'react-redux';
 import thunk from "redux-thunk";
 
-const store = createStore(reducers,applyMiddleware(thunk));
+const store = createStore(reducers, applyMiddleware(thunk));
 store.subscribe(() => console.log(store.getState()));
 
 function App() {
