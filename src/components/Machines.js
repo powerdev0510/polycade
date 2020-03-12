@@ -1,31 +1,20 @@
 import React, { Component } from 'react';
+
 import {
 	BrowserRouter as Router,
 	Switch,
 	Route,
 	Link,
 	useRouteMatch
-} from "react-router-dom";
+} from 'react-router-dom';
+import { connect } from 'react-redux';
+import { fetchMachinesSuccess } from '../actions';
+/* eslint-disable react/prop-types */
 
 class Machines extends Component {
-	state = {
-		machines: [],
-		machineId: 0
-	};
-	componentDidMount = () => {
-		fetch('http://localhost:8080/machines')
-		.then(res => res.json())
-		.then((data) => {
-			this.setState({machines: data});
-		})
-		.catch(console.log);
-	}
-
-	clickMachine = (id) => {
-		this.setState({machineId: id});
-	}
 	render () {
-		let machines = this.state.machines.map((machine, index) => {
+		const { machine } = this.props;
+		const machines = machine.map((machine, index) => {
 				return (
 					<tr key={machine.id}>
 						<td><Link to={`/machine/${machine.id}`}>{machine.name}</Link></td>
@@ -55,6 +44,13 @@ class Machines extends Component {
 				</div>
 			</div>
 		);
+		
 	}
 }
-export default Machines;
+
+const mapStateToProps = state => ({
+	machine: state.Machine.item,
+});
+/* eslint-enable react/prop-types */
+
+export default connect(mapStateToProps)(Machines);

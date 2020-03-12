@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import {withRouter} from 'react-router-dom';
 
+import { connect } from 'react-redux';
+
 /* eslint-disable react/prop-types */
 class Machine extends Component {
     constructor (props) {
@@ -15,7 +17,6 @@ class Machine extends Component {
     render () {
         return (
             <div>
-                Individual Machine
             </div>
         );
     }
