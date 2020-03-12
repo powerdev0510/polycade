@@ -7,9 +7,18 @@ export function fetchMachinesSuccess(item) {
     };
 }
 
+export function getById(id) {
+    return {
+        type: types.GET_BY_ID,
+        id
+    };
+}
+
 export function updateMachine(id, name){
     return {
         type: types.UPDATE_MACHINES,
+        id,
+        name
     }
 }
 

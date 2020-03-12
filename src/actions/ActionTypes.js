@@ -1,2 +1,3 @@
 export const FETCH_MACHINES = 'FETCH_MACHINES';
 export const UPDATE_MACHINES = 'UPDATE_MACHINES';
+export const GET_BY_ID = 'GET_BY_ID';

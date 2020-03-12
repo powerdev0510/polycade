@@ -8,19 +8,18 @@ import {
 	useRouteMatch
 } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { fetchMachinesSuccess } from '../actions';
 /* eslint-disable react/prop-types */
 
 class Machines extends Component {
 	render () {
 		const { machine } = this.props;
-		const machines = machine.map((machine, index) => {
+		const machines = machine.map((item, index) => {
 				return (
-					<tr key={machine.id}>
-						<td><Link to={`/machine/${machine.id}`}>{machine.name}</Link></td>
-						<td>{machine.ip_address}</td>
+					<tr key={item.id}>
+						<td><Link to={`/machine/${item.id}`}>{item.name}</Link></td>
+						<td>{item.ip_address}</td>
 						<td>
-							<progress max="100" value={machine.health}></progress>
+							<progress max="100" value={item.health}></progress>
 						</td>
 					</tr>
 				);
