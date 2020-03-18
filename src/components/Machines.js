@@ -11,6 +11,7 @@ import { connect } from 'react-redux';
 /* eslint-disable react/prop-types */
 
 class Machines extends Component {
+	
 	render () {
 		const { machine } = this.props;
 		const machines = machine.map((item, index) => {
@@ -48,7 +49,7 @@ class Machines extends Component {
 }
 
 const mapStateToProps = state => ({
-	machine: state.Machine.item,
+	machine: state.machine.item,
 });
 /* eslint-enable react/prop-types */
 

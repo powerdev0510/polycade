@@ -14,7 +14,7 @@ import { connect } from 'react-redux';
 /* eslint-disable react/prop-types */
 
 class Main extends Component {
-	componentDidMount = () => {
+	UNSAFE_componentWillMount = () => {
 		this.props.dispatch(fetchMachines());
 	}
 	render() {
@@ -40,7 +40,7 @@ class Main extends Component {
 	}
 }
 const mapStateToProps = state => ({
-	item: state.Machine.item,
+	item: state.machine.item,
 });
 export default connect(mapStateToProps)(Main);
 

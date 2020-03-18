@@ -1,5 +1,5 @@
 import store from '../store';
-import { updateMachineHealth } from '../actions'
+import { updateMachine } from '../actions'
 
 const ws = new WebSocket('ws://localhost:1337');
 
@@ -17,9 +17,9 @@ ws.onmessage = function msg(event){
         console.log(msg.type);
         switch ( msg.type ) {
             case 'HEALTH_UPDATE':
-                store.dispatch(updateMachineHealth(
+                store.dispatch(updateMachine(
                     msg.id,
-                    msg.health
+                    { health: msg.health }
                 ));
                 break;
             default:

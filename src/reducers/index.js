@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import Machine from './Machine'
+import machine from './Machine'
 
 const reducers = combineReducers({
-    Machine
+    machine
 });
 
 export default reducers;
