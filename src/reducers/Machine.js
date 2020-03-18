@@ -22,11 +22,9 @@ export default function Machine (state = initialState, action) {
                 index: foundIndex
             }
         case types.UPDATE_MACHINES:
-            foundIndex = item.findIndex(x => x.id === action.id)
-            state.item[foundIndex].name = action.name
-            return {
-                ...state,
-            }
+            return {...state, item: state.item.map(e => e.id === action.id ? { ...e, name: action.name } : e) }
+        case types.UPDATE_MACHINES_HEALTH:
+            return {...state, item: state.item.map(e => e.id === action.id ? { ...e, health: action.health } : e) }
         default:
             return state;
     }

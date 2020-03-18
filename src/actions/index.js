@@ -22,6 +22,14 @@ export function updateMachine(id, name){
     }
 }
 
+export function updateMachineHealth(id, health){
+    return {
+        type: types.UPDATE_MACHINES_HEALTH,
+        id,
+        health
+    }
+}
+
 // export function setIp() {
 //     return {
 //         type: types.IP
